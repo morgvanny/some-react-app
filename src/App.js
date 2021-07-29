@@ -1,14 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import NewComponent from "./NewComponent";
+import StatefulComponent from "./StatefulComponent";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>This is my app</h1>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <NewComponent color={"red"} extraText={"Hi"} />
+        <NewComponent color={"green"} extraText={"Bye"} />
+        <NewComponent color={"blue"} extraText={""} />
+        <StatefulComponent />
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -21,5 +27,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
